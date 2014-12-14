@@ -1,1 +1,15 @@
 Kyle Goodwill
+10. Give two examples of each of the following Software Engineering productivity mechanisms: 
+a.	Clarity via conciseness, 
+b.	Synthesis
+c.	Reuse
+d.	Automation via Tools
+
+29.	Answer the following:
+a.	Define and describe the DOM
+b.	When user interaction generates a browser event, what can JavaScript code do with respect to the DOM?
+c.	Define and describe AJAX.
+d.	What tool do we use to test JavaScript and AJAX?
+e.	What is the advantage of using AJAX to make HTTP requests to a Web server?
+f.	Define and describe 'graceful degradation'.
+
