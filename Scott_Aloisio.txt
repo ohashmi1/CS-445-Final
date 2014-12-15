@@ -1,0 +1,137 @@
+Questions by: Scott Aloisio
+
+Collaborated with: Ben Malecki, Mark Stepniewski
+
+Question 9:
+
+The Software Engineering Institute's Capability Maturity Model is used to
+evaluate an organization's software development practices (i.e., process
+maturity).  Illustrate the practices that would have to be in place to achieve
+each of the following levels.  Hint:  discuss with respect to Key Process Areas
+(KPAs).
+a. Initial
+    There are no formal practices in place.
+b. Repeatable
+    Managed, Requriements Management, Project Planning, Project Monitoring and
+    Control, Supplier Agreement Management, Measurement and Analysis, Process
+    and Product Quality Assurance, Configuration Management. 
+c. Defined
+    Requirements Development, Technical Solution, Product Integration,
+    Verification, Validation, Organizational Process Focus, Organizational
+    Process Definition, Organizational Training, Risk Management, Decision
+    analysis and Resolution, Integrated Product and Process Development
+    environment, Integrated Project Management, Integrated Project Management,
+    Integrated Teaming, Integrated Supplier Management, Organizational
+    Environment Integration.
+d. Managed
+    Organizational Process Performance, Quantitative Project Management
+e. Optimizing
+    Organizational Innovation and Deployment, Causal Analysis and Resolution,
+    Continuous Process improvement.
+
+http://en.wikipedia.org/wiki/Capability_Maturity_Model
+Answer here: http://www.smartmatix.com/Resources/CMMIexplained/KeyProcessAreasKPAs.aspx
+
+Question 23:
+
+Appendix B contains the contents of a Cucumber feature file for the
+RottenPotatoes application.
+
+a. Show the available regular expression steps from web_steps.rb that could be
+    used to match the steps in the feature, and explain how they match the feature
+    step (i.e., explain how the regular expression is constructed).
+    
+    /^(?:|I )press "([^"]*)"$/ do |button|
+    /^(?:|I )follow "([^"]*)"$/ do |link|
+    
+    Any line containing 0 or 1 ':' or an I, followed by the word that is not
+    captured (press and follow, respectively) and then a quote delimited string
+    is captured. The quote delimited string is the button or link that is being
+    accessed for the test.
+
+b. Show the additional regular expression steps in ruby that would have to be
+    added, and explain how they would match.
+
+    /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
+    /^the following movies exist:$/ do |movies_table|
+    /I should not see any of the movies/ do
+    /I should see all of the movies/ do
+
+    For the last three, the initial strings are matched to their respective
+    actions, which are excecuted. The first expression is different because it
+    captures the "un" in "uncheck". If it happens to have any characters in that
+    captured set, the box is unchecked, otherwise it is not.
+    
+
+    Appendix B
+    Background: movies have been added to database
+    
+        Given the following movies exist:
+        | title | rating | release_date |
+        | Aladdin | G | 25-Nov-1992 |
+        | The Terminator | R | 26-Oct-1984 |
+        | When Harry Met Sally | R | 21-Jul-1989 |
+        | The Help | PG-13 | 10-Aug-2011 |
+        | Chocolat | PG-13 | 5-Jan-2001 |
+        | Amelie | R | 25-Apr-2001 |
+        | 2001: A Space Odyssey | G | 6-Apr-1968 |
+        | The Incredibles | PG | 5-Nov-2004 |
+        | Raiders of the Lost Ark | PG | 12-Jun-1981 |
+        | Chicken Run | G | 21-Jun-2000 |
+
+        And I am on the RottenPotatoes home page
+        And I check the following ratings: G PG PG-13 R
+        And I press "Refresh"
+
+    Scenario: sort movies alphabetically
+        When I follow "Movie Title"
+        Then I should see all movies sorted by title in increasing order
+    Scenario: sort movies in increasing order of release date
+        When I follow "Release Date"
+        Then I should see all movies sorted by release date in increasing order
+
+Question 39:
+
+Lessons Learned (Everyone must answer!):  
+Most organizations carry out a postmortem (i.e., after delivery and acceptance)
+analysis of a project. In it, they assess all aspects of the project including
+products, process and resources with the intent of identifying both what well in
+the project and what areas should be improved upon in future projects. Before
+a formal postmortem, each team member does a self-assessment, called a Lessons
+Learned document. Write your own sections of our Lessons Learned document for
+the class by summarizing: 
+
+a. What were the most important (to you, personally)
+    The most important part of taking this course was being able to familiarize
+    myself with the workflow of a software engineer. Although this was
+    accomplished to a great extent, I'm not sure that I've been adequately
+    familiarized with the tools and skills. Ultimately the course accomplished
+    the main goal, but still left something do be desired.
+
+b.  Note any concepts, principles, skills, tools, etc. that you would have liked
+to learn, but that we didn't cover.  
+    I wolud have liked to spent more time truly understanding Rails. It's a very
+    different procedure to simply go through some tutorials, and go through a
+    true learning process. I felt that a lot of the assignments and projects
+    were demanding a very simple process without explaining the underlying
+    fundamentals. If I were going to learn Rails on my own, I would probably
+    just read through railstutorial.org slowly and carefully until I felt
+    comfortable enough to start a small project myself. Only then would I feel
+    comfortable enough to join another project and contribute.
+
+c.  List all everything that you feel you did especially well this semester
+(master specific tools, languages, skills, etc.; contribute to the project in a
+specific way, etc., learn and implement specific things quickly, etc.).  
+    I am very familiar with Agile methodologies and managing assignments in a
+    work environment.
+
+d.  List anything that that you feel that you didn't do as well, or that didn't
+go as well as you hoped (getting a list of these items will help me to better
+schedule material for future semesters).  e.  THANK YOU!
+    I don't feel like I was familiar enough with the tools before starting on
+    the agile-ventures project. I had just been introduced and done a couple of
+    simple tutorials on a very simple project. This course would be better if
+    the final was treated as extra credit. There is simply too much that was
+    left unlearned before starting the project. That time would be better spent
+    taking the time to learn the tools to their fullest extent.
+
