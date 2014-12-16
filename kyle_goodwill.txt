@@ -1,10 +1,13 @@
-Kyle Goodwill
-10. Give two examples of each of the following Software Engineering productivity mechanisms: 
+Owner: Kyle Goodwill
+Collaborators: Kelsey Skaarva, David Morris
+Reviewer: Weronika Kowalczyk
+Hangout: http://youtu.be/Ucl46TncWdk
+Question 10. Give two examples of each of the following Software Engineering productivity mechanisms: 
 a.	Clarity via conciseness
 	Shorter easier to read code
 	
 	Examples:
-	assert_greater_than_or_equal_to(a, 7) vs. a.should_be >= 7
+assert_greater_than_or_equal_to(a, 7) is what would normally be written but the snippet a.should_be >= 7 is more concise
 	Metaprogramming in Ruby
 
 b.	Synthesis
@@ -15,30 +18,35 @@ b.	Synthesis
 	Migrations in rails to create database tables automatically
 	
 c.	Reuse
-	Reuse old code instead of writing new code
+Reuse old code instead of writing new code to do something that has already been done somewhere else in your code
 
 	Examples:
-	Create functions to be used to the same thing over and over
+	Create functions to be used to do the same thing over and over
 	Design patterns to use the same solution on many different problems
 
 d.	Automation via Tools
-	Replace tedious manual tasks with automation to save time
+	Replace tedious manual tasks with code to do it for you to save time
 
 	Examples:
-	RSpec
+	Autotest
 	Cucumber
 
-29.	Answer the following:
+Owner: Kyle Goodwill
+Collaborators: Htin Linn Kyaw, David Morris
+Reviewer: Shari Steinberger
+Hangout: http://youtu.be/Ucl46TncWdk
+Question 29.	Answer the following:
 a.	Define and describe the DOM
 	The DOM is the Document Object Model, a language independent hierarchical representation of a HTML or XML document, and it contains all of the different tags in a web page document as nodes. The nodes are then placed into a structure called the DOM tree which organizes the nodes into an order that can be accessed by Javascript to read and manipulate the page.
 b.	When user interaction generates a browser event, what can JavaScript code do with respect to the DOM?
 	Javascript can inspect the DOM elements and their values, as well as change the values and their attributes.
 c.	Define and describe AJAX.
-	AJAX stands for Asynchronous Javascript and XML, it performs background HTTP requests to the server asynchrously without redrawing the page.
+	AJAX stands for Asynchronous Javascript and XML, it performs background HTTP requests to the server asynchronously without redrawing the page.
 d.	What tool do we use to test JavaScript and AJAX?
 	Jasmine is the tool used to test AJAX and Javascript, it is based upon RSpec
 e.	What is the advantage of using AJAX to make HTTP requests to a Web server?
 	The advantage of using AJAX to make requests to a web server is that content on the page can be changed dynamically without the need to redraw the page.
 f.	Define and describe 'graceful degradation'.
 	A website that is built to gracefully degrade is intended to be viewed first by the most modern browsers, and then as older, less feature-rich browsers view it should degrade in a way that is still functional, but with fewer features.
+
 
