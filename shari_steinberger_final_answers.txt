@@ -95,4 +95,12 @@ ACM/IEEE SE Code of Ethics and Professional Practice
 • Software engineers shall be fair to and supportive of their colleagues
 • Software engineers shall participate in lifelong learning regarding the practice of their profession and shall promote an ethical approach to the practice of the profession
 
-
+Question 39:
+a. What were the most important (to you, personally) concepts, principles, skills, tools, etc. that you learned/mastered throughout the semester.
+I had an amazing experience working with the bike share team, and I think I overcame my doubts about working in teams that I had had previously. 
+b. Note any concepts, principles, skills, tools, etc. that you would have liked to learn, but that we didn't cover.
+I would have liked to learn more about deployment of a big software project, but we didn't get that far with our project.
+c. List all everything that you feel you did especially well this semester (master specific tools, languages, skills, etc.; contribute to the project in a specific way, etc., learn and implement specific things quickly, etc.).
+I feel like I have a good grasp on Ruby, even though we only spent a short amount of time learning it. It's a language that's easy to learn and I'm really glad I have it under my belt as another language that I know.
+d. List anything that that you feel that you didn't do as well, or that didn't go as well as you hoped (getting a list of these items will help me to better schedule material for future semesters).
+I had issues grasping some Rails concepts, like rspec and cucumber testing. 
