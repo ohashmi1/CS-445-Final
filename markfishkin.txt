@@ -1,0 +1,72 @@
+Question 20:
+Answer the following:
+a.	Define framework and explain its benefits.
+b.	Is a framework the same or different from a toolkit?  Explain.
+c.	How is an architecture or design pattern related to a framework?
+d.	Discuss convention over configuration with respect to the Rails framework.
+
+
+a. A framework is a set of cooperating classes that make up a reusable design. They create a foundation for the project and focus on design reuse rather than code reuse. It's benifical as it provides a well known structure that works. It also creates less work for the programmer as they only have to focus on creating the function calls specific to the application.
+
+b. A framework and toolkit are fundamentally different. A toolkit provides the programmer with a set of functions calls and expects the programmer to create the design and body of the application. This is contrary to frameworks which provide the structure and not the function calls. Both have their benefits. A framework reduces overhead for the programmer, while a toolkit gives the programmer more freedom as they are not limited by conventions.
+
+c. A framework dictates the architecture being used in an application. By using it, you agree to adhere to the principles of the related architecture. An architecture is how the program should be built, while the framework is the skeleton to build it upon.
+
+d. Convention over configuration is used widely throughout the Rails framework. It seeks to decrease the amount of decisions a devloper needs to make, allowing them to focus more on the developement of the software. It greatly reduces the time a programmer thinks about where something something has to go, as the convention will place it in the correct place. For example, when creating a model in Rails, convention creates a database table for that model without developer input. Also at the start of the development process, Convention over configuration automatically creates the proper file system for the user.
+
+//dictates the naming scheme. streamlines
+
+Owner:Mark Fishkin
+Collaborators: Ridwan Olatilewa, Alex Valera
+Hangout:https://www.youtube.com/watch?v=61DyMxytIc0&feature=youtu.be
+Reviewer: Ryan Smith
+Hangout:
+Pivotal Tracker:https://www.pivotaltracker.com/n/projects/1230002/stories/84548374
+
+------------------------------------------------------------------------------------------
+
+Question 36:
+Answer the following:
+a.	What is the type of association in Rails that handles indirect relationships?
+b.	Given:
+Class Moviegoer
+  has_many:reviews
+How could we establish an association that could give us the movies that a moviegoer has reviewed.
+c.	What is the RESTful way to create routes for associations?
+d.	Show the RESTful way to create a route for movies and its associated item reviews
+e.	What should be a concern if a movie is then deleted?
+f.	What is a named scope, and how is it used?
+g.	Does using a named scope incur performance penalties?  Why or why not?
+
+
+a. Through-associations handle indirect relationships in Rails.
+
+b.
+Class Moviegoer
+  has_many :reviews 
+  has_many :movies, through => :reviews
+
+c. The RESTful way to create routes for associations is to use a nested route URI which captures the IDs of the resource and of the items associated with that resource.
+
+d.resources :movies do
+	resources :reviews
+  end
+
+e. When a movie is deleted, anything that is owned by association to that movie needs to be deleted as well. This is done through the statement dependent=>destroy, which is added to the owned field.
+
+f. Named scope allows for reuse of model logic. It encapsulates specific model logic in a composable way. Lambda expressions work well with named scopes because they allow the passing of arguments into the named scope.
+
+g. Using a named scope does not incur performance penalties. Named scopes are lazily evaluated, meaning that there is no database querey till a match occurs. This also means that it can occur in any order.
+
+Owner:Mark Fishkin
+Collaborators: Ridwan Olatilewa, Alex Valera
+Hangout:https://www.youtube.com/watch?v=61DyMxytIc0&feature=youtu.be
+Reviewer: Ryan Smith
+Hangout:
+Pivotal Tracker:https://www.pivotaltracker.com/n/projects/1230002/stories/84547722
+
+----------------------------------------------------------------------------------------------
+
+Question 39:
+
+a.
