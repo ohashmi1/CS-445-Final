@@ -1,0 +1,100 @@
+Owner: Anh Quach
+Collaborators: Yue Zheng, Shari Steinberger
+Reviewer: Weronika Kowalczyk
+Hangout: 
+http://youtu.be/U7lgfKLVbvE
+http://youtu.be/LhUqqeeU59Y
+Pivotal Tracker: 
+https://www.pivotaltracker.com/story/show/84548350
+https://www.pivotaltracker.com/story/show/84547716
+
+Question 25:
+Answer the following:
+a.	Define and explain the meaning of FIRST.
+b.	Describe and explain what is meant by TDD aka Red-Green-Refactor?
+c.	Define and describe RSpec and explain what it does.
+d.	Explain what code coverage means and discuss the various ways in which it can be measured.
+e.	Explain what is meant by the following Plan and Document testing methods:  black box, white, grey box, mutation and fuzz.
+f.	Define exhaustive testing and explain how it can be implemented (or not).
+
+ANSWER:
+a. FIRST is the five principles of creating a good test: Fast, Independent, Repeatable, Self-checking, and Timely
+	First: it should be easy and quick to run
+	Independent: No test should rely on preconditions created by other tests
+	Repeateable: test behavior should not depend on external facotrs such as today's date or "magic constants"
+	Self-checking: each test should be able to determine on its own whether it passed or failed, rather than relying on human to check its output.
+	Timely: tests should be created or updated at the same time as the code being tested.
+
+b. Test-driven development (TDD) advocates the use of tests to drive the development of code.
+Red-Green_Refactor is the TDD loop which has the following steps:
+	1. Before you write any code, write a test for one aspect of the behavior it should have. Since the code being tested doesn't exist yet, writing the test forces you to think about how you wish the code would react with its collaborators if it did exists.
+	2. Red step: Run the test, and verify that it fails because you haven't yet implementd the code to make it pass.
+	3. Green step: Write the simplest possible code that causes this test to pass without it breaking any existing tests.
+	4. Refactor step: Look for opportunities to refactor either your code or your tests - chaging the coe's structure to eliminate redundancym repetition, or other ugliness that may have arisen as a result of adding the new code. The tests should ensure that your refactoring doesn't introduce bug.
+	5. Repeat until all behaviors necessary to pass the scenario step are complete.
+
+c. RSpec is a domain-specific language (DSL) for testing Ruby code. It is designed to ease tackling problems within a single area (domain) at the expense of generality. 
+RSpec is just Ruby code, but takes advantage of Ruby's features and syntax as to make up a "mini-language" focused on the job of testing.
+RSpec helps us capture expectations of how our code should behave
+
+d. Code coverage shows how much the test suite exercise the subject code in the way it would be exercised in production.
+There are serveral ways code coverage can be measured:
+	S0 or Method coverage: is every method executed at least once by the test suite?
+	S1 or Call coverage or Entry/Exit coverage: has each method been called from every place it could be called?
+	C0 or Statement coverage: is every statement of the source code executed at least once by the test suite, counting both branches of a conditional as a single statement?
+	C1 or Branch coverage: has each branch been taken in each direction at least once?
+	C2 or Path coverageL has every possible route through the code been executed?
+	Modified Condition/Decision Coverage (MCDC) combines a subset of the above levels: Each point of entry ans exit in the program has been invoked at least once, every decision in the program has taken possible outcomes at least once, and each condition in a decision has been shown to indeopendently affect the decision's outcome.
+
+e. Black-box tests have their designs based solely on the software's external specifications.
+White-box tests are designed to relect knowledge about software implementation that is not implied by external specifications.
+Mutation tests is a test-automation technique in which small but syntatically legal changes are made to the program's source code. Most change would cause at least one test to fail, so a mutation that cause no test to fail indicates either lack of test coverage or a very strange program.
+Fuzz testing: throwing random data at your application and seeing what breaks.
+A gray-box tester partially knows the internal structure, which includes access to the documentation of internal data structures as well as the algorithms used.
+
+f. In exhaustive testing, we test the software by entering every possible permutations and combinations of inputs.
+Given the vast number of different combinations of inputs, testing cannot be exhaustive. Instead, we divide in order to conquer by focusing on unit testing, module testing, integration testing, and full system testing or acceptance testing.
+
+Question 37:
+Answer the following with respect to Design Patterns:
+a.	Define and describe SOLID as modified for Ruby on Rails applications.
+b.	In contrast, describe and discuss four problems that thwart productivity.
+c.	Model-View-Controller is considered to be a meta-pattern (aka Aggregate Design Pattern) that implements (at a minimum) the Observer (describing the relationship between the view and model), the Composite (by creating a 'tree' of views) and the Strategy (describing the relationship between the controllers and the views) design patterns.  Describe and discuss its use in Ruby on Rails applications, and note in which tier it is found.
+d.	Define and describe one creational pattern, one structural pattern and one behavioral pattern.
+
+ANSWER:
+a. SOLID stands for set of five design principle that clean codes should respect:
+	Single Responsibility: a class should have one and only one reason to change.
+	Open/Closed: classes should be open for extension but closed for modifications
+	Liskov Substitution: substituting a subclass for a class should preserve correct program behavior.
+	Injection of Dependencies: collaborating classes whose implementation may vary at runtime should depend on an intermediate "injected" dependency.
+	Demeter: speaking only to your friends; treat your friends' friends as strangers.
+
+b. Four problems that thwart productivity:
+	1. Viscosity: it's easy to fix a problem using a quick hack, even though you know that's not the right thing to do.
+	2. Immobility: it's hard to be DRY and because the functionality you want to reuse is wired into the app in a way that makes extraction difficult.
+	3. Needless repetition: possibly as a consequence of immobility, the app has similar functionality duplicated in multiple areas. As a result, a change in one part of the code triples to many other parts of the app, so that a small change in functionality requires a lot od little changes to code and tests, a process sometimes called shotgun surgery.
+	4. Needless complexity: the app's design reflects generality that was inserted before it was needed.
+
+c. Observer pattern is used when one class (observer) wants to be kept aware of what another class is doing without knowing the details of the subject's implementation. Rails' ActiveSupport provides a concise Observer that lets you observe any model's ActiveRecord lifecycle hooks.
+Strategy Pattern supports the case in which there is a general approach to doing a task but many possible patterns. An example of Strategy pattern is in OmniAuth: many apps need third party authentication, and the steps are quite different depending on the auth provoder.
+Composite Pattern: provides operations that work on both an individual objets and a collection of that type of object
+
+d. One creational pattern: Builder seperate the construction of a complex object from its representation allowing the same construction process to create various representations.
+One Structural Pattern: Decorator attachs additional responsibilities to an object dynamically, keeping the same interface. Helps with "Prefer composition or delegation over inheritance"
+One Behavioral Pattern: Interpreter defines a representation of a language along with an interpreter that executes the representation.
+
+Question 39:
+Lessons Learned (Everyone must answer!):  Most organizations carry out a postmortem (i.e., after delivery and acceptance) analysis of a project.   In it, they assess all aspects of the project including products, process and resources with the intent of identifying both what well in the project and what areas should be improved upon in future projects.   Before a formal postmortem, each team member does a self-assessment, called a Lessons Learned document.  Write your own sections of our Lessons Learned document for the class by summarizing:
+a.	What were the most important (to you, personally) concepts, principles, skills, tools, etc. that you learned/mastered throughout the semester.
+b.	Note any concepts, principles, skills, tools, etc. that you would have liked to learn, but that we didn't cover.
+c.	List all everything that you feel you did especially well this semester (master specific tools, languages, skills, etc.;  contribute to the project in a specific way, etc., learn and implement specific things quickly, etc.).
+d.	List anything that that you feel that you didn't do as well, or that didn't go as well as you hoped (getting a list of these items will help me to better schedule material for future semesters).
+e.	THANK YOU!
+
+ANSWER:
+a. Ruby on Rails and Agile project management model
+b. JavaScript and html
+c. Ruby
+d. I feel like we did not have enough time to master cucumber and rpec test. I definitely need more practice before joining an Agileventures project.
+
