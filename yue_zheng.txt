@@ -3,28 +3,28 @@ The three pillars of Ruby are:  Everything is an object, every operation is a me
 
 a.Define and explain each of these.
  
-(1). Everything is an object. Even primitive types like integers are true objects.
+(1).Everything is an object. Even primitive types like integers are true objects.
  
-(2). Every operation is a method call on some object and returns a value. For 	   instance, a.b means: call method b on object a, and a is the receiver to     which you send the method call, assuming a will respond to that method.
+(2).Every operation is a method call on some object and returns a value. For 	   instance, a.b means: call method b on object a, and a is the receiver to     which you send the method call, assuming a will respond to that method.
 
 (3).All programming is meta programming: classes and methods can be added or changed at any time, even while a program is running.
 
-b.     Provide two examples of each.
+b.Provide two examples of each.
  
 (1).
-1.  If I type 5.class in terminal, it will show =>Fixnum. This proves that integer 5 is   a object.
-2. When we type “1.is_a? Object” or “Fixnum.is_a? Object”, and … in terminal, the result will be true, which means everything is an object in ruby.
+1.If I type 5.class in terminal, it will show =>Fixnum. This proves that integer 5 is   a object.
+2.When we type “1.is_a? Object” or “Fixnum.is_a? Object”, and … in terminal, the result will be true, which means everything is an object in ruby.
  
 (2).
-1. 1+2, “a”+”b”,[a,b]+[b,c] are all different methods named ‘+’.
-2. A lot of operations can be rewritten as calls to send:
+1.1+2, “a”+”b”,[a,b]+[b,c] are all different methods named ‘+’.
+2.A lot of operations can be rewritten as calls to send:
      1+2 => 1.send(:+,2)
      x==4 => x.send(:==,4)
      … So it can prove that every operation is a method to some degree.
 
 (3).
-1.  The  use of ”attr_accessor” to define instance methods that can set or get           values of instance variables is an example of meta programming- creating code at runtime that defines new methods.
-2.  We can reopen a class and add a new method, which is another example of metaprogramming.
+1.The  use of ”attr_accessor” to define instance methods that can set or get           values of instance variables is an example of meta programming- creating code at runtime that defines new methods.
+2.We can reopen a class and add a new method, which is another example of metaprogramming.
  
 c.Define and discuss 'duck typing' and its relationship to mix-ins.
 
@@ -37,7 +37,6 @@ encourages behavior reuse by making use of mix-ins.
 Owner: Yue Zheng
 Collaborators: Anh Quach and Ryan Smith
 Hangout:  http://youtu.be/LhUqqeeU59Y
-
 Reviewer(s): Ridwan Olatilewa
 Hangout:  http://youtu.be/LhUqqeeU59Y
 Pivotal Tracker:  https://www.pivotaltracker.com/n/projects/1230002/stories/84548378
