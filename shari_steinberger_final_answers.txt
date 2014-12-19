@@ -1,0 +1,106 @@
+Shari Steinberger
+CS445 – Final Exam Question 1 and 22
+
+Question 22:
+
+Owner: Shari Steinberger
+Collaborators: Weronika, David
+Reviewer: JoJo - Looks great! Fixed a couple small grammar mistakes, but context is awesome!
+Hangout: http://youtu.be/Ucl46TncWdk
+
+
+
+Answer the following:
+Define and describe the SMART guidelines for user stories.
+Specific, Measurable, Achievable, Relevant, Timeboxed. 
+Specific: example: Feature: User can search for a movie (vague) 2 Feature: User can search for a movie by title (specific)
+Measurable: Adding Measurable to Specific means that each story should be testable, which implies that there are known expected results for some good inputs. An example of a pair of an unmeasurable versus measurable feature is Only the second case can be tested to see if the system fulfills the requirement.
+Achievable: Ideally, you implement the user story in one Agile iteration. If you are getting less than one story per iteration, then they are too big and you need to subdivide these stories into smaller ones. As mentioned above, the tool Pivotal Tracker measures Velocity , which is the rate of completing stories of varying difficulty.
+Relevant: A user story must have business value to one or more stakeholders. To drill down to the real business value, one technique is to keep asking “Why.” 
+Timeboxing:  A story’s development is stopped once you’ve exceeded the time budget. Either you give up, divide the user story into smaller ones, or reschedule what is left according to a new estimate. If dividing looks like it won’t help, then you go back to the customers to find the highest value part of the story that you can do quickly.
+Show and explain the proper format for a user story as developed by Connextra.
+
+Feature name
+ As a [kind of stakeholder], 
+So that [I can achieve some goal], 
+I want to [do some task]
+This format identifies the stakeholder since different stakeholders may describe the desired behavior differently. For example, users may want to link to information sources to make it easier to find the information while operators may want links to trailers so that they can get an income stream from the advertisers. All three clauses have to be present in the Connextra format, but they are not always in this order.
+
+What is a storyboard and what is its relationship to a Lo-Fi User Interface sketch?
+A storyboard is a collection of Lo-Fi User Interface sketches.
+Lo-Fi sketches show what the UI looks like at one instant in time. However, we also need to show how the sketches work together as a user interacts with a page. Filmmakers face a similar challenge with scenes of a movie. Their solution, which they call storyboarding , is to go through the entire film as if it was a comic book, with drawings for every scene. Instead of a linear sequence of images like in a movie, the storyboard for a UI is typically a tree or graph of screens driven by different user choices. To make a storyboard, you must think about all the user interactions with a web app: Pages or sections of pages, Forms and buttons, and Popups.
+Explain what is meant by 'Code Smells'.
+Structural characteristics of source code not readily captured by metrics. Like real smells, code smells call our attention to places that may be problematic. 
+Describe and explain the SOFA guidelines for creating a well-written method.
+Be Short, so that its main purpose is quickly grasped; do only One thing, so testing can focus on thoroughly exercising that one thing; take Few arguments, so that all-important combinations of argument values can be tested; maintain a consistent level of Abstraction, so that it doesn’t jump back and forth between saying what to do and saying how to do it.
+
+
+
+Question 1:
+
+Owner: Shari Steinberger
+Collaborators: Weronika, David
+Reviewer: Kyle - looks good. 
+Hangout: http://youtu.be/Ucl46TncWdk
+
+
+
+
+Note that the ACM/IEEE Code of Ethics and Professional Practice is provided in Appendix A of this document. With respect to Therac-25, the Ariane 5 rocket and the FBI Virtual Case File
+a. Describe what happened.
+Ariane 5 flight 501. On June 4, 1996, an overflow occurred 37 seconds after liftoff in a guidance system, with spectacular consequences, when a floating point number was converted to a shorter integer. This exception could not occur on the slower Ariane 4 rocket, so reusing successful components without thorough system testing was expensive: satellites worth $ 370M were lost.
+The Therac-25 was a radiation therapy machine produced by Atomic Energy of Canada Limited (AECL) after the Therac-6 and Therac-20 units (the earlier units had been produced in partnership with CGR of France).
+It was involved in at least six accidents between 1985 and 1987, in which patients were given massive overdoses of radiation. Because of concurrent programming errors, it sometimes gave its patients radiation doses that were thousands of times greater than normal, resulting in death or serious injury. These accidents highlighted the dangers of software control of safety-critical systems, and they have become a standard case study in health informatics and software engineering.
+Virtual Case File (or VCF) was a software application developed by the United States Federal Bureau of Investigation (FBI) between 2000 and 2005. The project was officially abandoned in April 2005, while still in development stage and cost the federal government nearly $170 million. In 2006, the Washington Post wrote "In a 318-page report, completed in January 2005 and obtained by The Post under the Freedom of Information Act, [the Aerospace Corporation] said the SAIC software was incomplete, inadequate and so poorly designed that it would be essentially unusable under real-world conditions. Even in rudimentary tests, the system did not comply with basic requirements, the report said. It did not include network-management or archiving systems—a failing that would put crucial law enforcement and national security data at risk"
+
+
+b. Describe the causes leading up to a. 
+Ariane 5  - The Ariane 5 reused the inertial reference platform from the Ariane 4, but the Ariane 5's flight path differed considerably from the previous models. Specifically, the Ariane 5's greater horizontal acceleration caused the computers in both the back-up and primary platforms to crash and emit diagnostic data misinterpreted by the autopilot as spurious position and velocity data. Pre-flight tests had never been performed on the inertial platform under simulated Ariane 5 flight conditions so the error was not discovered before launch. During the investigation, a simulated Ariane 5 flight was conducted on another inertial platform. It failed in exactly the same way as the actual flight units.
+The greater horizontal acceleration caused a data conversion from a 64-bit floating point number to a 16-bit signed integer value to overflow and cause a hardware exception. Efficiency considerations had omitted range checks for this particular variable, though conversions of other variables in the code were protected. The exception halted the reference platforms, resulting in the destruction of the flight.
+FBI Virtual Case File -
+The project demonstrated a systematic failure of software engineering practices:
+Lack of a strong technical architecture ("blueprint") from the outset led to poor architectural decisions
+Repeated changes in specification
+Repeated turnover of management, which contributed to the specification problem
+Micromanagement of software developers
+The inclusion of many FBI Personnel who had little or no formal training in computer science as managers and even engineers on the project
+Scope creep as requirements were continually added to the system even as it was falling behind schedule
+Code bloat due to changing specifications and scope creep—at one point it was estimated the software had over 700,000 lines of code.
+Planned use of a flash cutover deployment made it difficult to adopt the system until it was perfected.
+
+Therac – 25: The accidents occurred when the high-power electron beam was activated instead of the intended low power beam, and without the beam spreader plate rotated into place. Previous models had hardware interlocks in place to prevent this, but Therac-25 had removed them, depending instead on software interlocks for safety. The software interlock could fail due to a race condition. The defect was as follows: a one-byte counter in a testing routine frequently overflowed; if an operator provided manual input to the machine at the precise moment that this counter overflowed, the interlock would fail.
+The high-powered electron beam struck the patients with approximately 100 times the intended dose of radiation, delivering a potentially lethal dose of beta radiation. The feeling was described by patient Ray Cox as "an intense electric shock", causing him to scream and run out of the treatment room. Several days later, radiation burns appeared and the patients showed the symptoms of radiation poisoning; in three cases, the injured patients later died as a result of the overdose.
+
+c. Describe how a. could have been prevented.
+Ariane 5: Better integration procedures should be in place when upgrading from one system to another version.
+Therac - 25: Check for buffer overflows! Every beginner programmer knows to check for that. 
+FBI Virtual Case File: Better management and better organization. 
+d. Which A/I CEPP principles were violated in each of the above projects. (still needs to be answered)
+For Ariane 5:  “Software engineers shall act consistently with the public interest.” Because the did not make sure that their new system is consistent with the old system, leading to the overflow error. 
+For Therac - 25: “Software engineers shall ensure that their products and related modifications meet the highest professional standards possible.” The overflow error was something that could easily have been avoided and does not meet the highest professional standards. 
+For FBI Virtual Case File: “Software engineering managers and leaders shall subscribe to and promote an ethical approach to the management of software development maintenance.” The management style on this case was so terrible, causing the project to be a complete failure. 
+
+e. How can we ensure that developers, managers and clients adhere to these principles, and that violators are disciplined? What, if any, possibilities might there be?
+	
+Every company should have employees sign the ACM/IEEE SE code of Ethics in addition to the company’s code of ethics when they get hired. If anyone is caught violating these principles, it should be ground for firing them (or a warning for a first offence). Companies should have whistleblowing protection so that employees feel safe reporting if one of their colleagues violates the code.   
+
+Appendix A
+ACM/IEEE SE Code of Ethics and Professional Practice
+• Software engineers shall act consistently with the public interest
+• Software engineers shall act in a manner that is in the best interests of their client and employer, consistent with the public interest
+• Software engineers shall ensure that their products and related modifications meet the highest professional standards possible
+• Software engineers shall maintain integrity and independence in their professional judgment
+• Software engineering managers and leaders shall subscribe to and promote an ethical approach to the management of software development maintenance
+• Software engineers shall advance the integrity and reputation of the profession, consistent with the public interest
+• Software engineers shall be fair to and supportive of their colleagues
+• Software engineers shall participate in lifelong learning regarding the practice of their profession and shall promote an ethical approach to the practice of the profession
+
+Question 39:
+a. What were the most important (to you, personally) concepts, principles, skills, tools, etc. that you learned/mastered throughout the semester.
+I had an amazing experience working with the bike share team, and I think I overcame my doubts about working in teams that I had had previously. 
+b. Note any concepts, principles, skills, tools, etc. that you would have liked to learn, but that we didn't cover.
+I would have liked to learn more about deployment of a big software project, but we didn't get that far with our project.
+c. List all everything that you feel you did especially well this semester (master specific tools, languages, skills, etc.; contribute to the project in a specific way, etc., learn and implement specific things quickly, etc.).
+I feel like I have a good grasp on Ruby, even though we only spent a short amount of time learning it. It's a language that's easy to learn and I'm really glad I have it under my belt as another language that I know.
+d. List anything that that you feel that you didn't do as well, or that didn't go as well as you hoped (getting a list of these items will help me to better schedule material for future semesters).
+I had issues grasping some Rails concepts, like rspec and cucumber testing. 

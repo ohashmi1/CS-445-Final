@@ -1,0 +1,81 @@
+16.
+
+Owner: Htin Linn
+Collaborators: Kelsey Skaarva and JoJo Wallace
+Reviewer: Weronika Kowalczyk
+Hangout: http://youtu.be/Ucl46TncWdk
+Pivotal Tracker: https://www.pivotaltracker.com/story/show/84548390
+
+Review by Weronika Kowalczyk: Answers are clear and concise and answer all parts of the questions. 
+
+a) Define and describe the protocols on which HTTP is dependent.
+HTTP relies on TCP/IP(Transmission Control Protocol/Internet Protocol). 
+TCP/IP allows reliable transmission of ordered sequence of bytes between a pair of network agents.
+
+b) What is the significance of the IP address 127.0.0.1?
+127.0.0.1 refers to the local computer. This address can also reached via a special name, localhost.
+
+c) What is a port and how/why is it used? What port is used by Web servers?
+A port is an application-specific construct serving as a communications endpoint in a computer's OS. 
+Port numbers are used by TCP/IP to distinguish different network agents at the same IP address.
+The default port number for Web servers is 80 for http or 443 for https.
+
+d) Explain what a URI is and describe its basic structure.
+A URI(Uniform Resource Identifier) is a string of characters used to identify a name of a resource.
+A URI begins with the name of the communication scheme by which the information may be retrieved, followed by a hostname, optional port number, and a resource on the host to be retrieved. 
+
+e) Define and describe DNS. Would it be possible to make an internet connection without it?
+DNS stands for Domain Name System. It allows the use of human-friendly names to identify hard-to-remember numerical IP addresses. It would still be possible to make an internet connection without it by using plain IP addresses. Nonetheless, it would be significantly less convenient.
+
+f) Explain how HTTP is a 'stateless protocol'. If this is so, how can a server know that two different requests are actually from the same user?
+HTTP is a 'stateless protocol' because every HTTP request is independent of and unrelated to all previous requests. A server can know that two different requests are actually from the same user by using cookies. HTTP cookies associate a particular user's browser with information held at the server corresponding to that user's session. 
+35.
+
+
+
+Owner: Htin Linn
+Collaborators: Kyle Goodwill and Kelsey Skaarva
+Reviewer: JoJo Wallace - Answers look great! Didn’t see any grammar errors. Wording is concise which makes it easy to read and understand. Great job Linn!
+Hangout: http://youtu.be/Ucl46TncWdk
+Pivotal Tracker: https://www.pivotaltracker.com/story/show/84547732
+
+a) Explain the difference between authentication and authorization.
+Authentication is a process by which an entity or principal proves that it is who it claims to be.
+Authorization refers to whether an entity or principal is allowed to do something. 
+
+b) What is the relationship between third-party authentication and single sign-on?
+Single sign-on refers to an end-user experience in which a single set of credentials is used to sign in to a variety of different services.
+Third-party authentication is one way to achieve single sign-on: the requesting app can verify the identity of user via an authentication provider, without the user revealing her credentials to the requesting app.
+
+c) Give an example of an authorization provider.
+An example of an authorization provider is Twitter.
+
+d) What would you use to cleanly indicate that a user has been authenticated in a Rails app?
+One way to cleanly indicate that a user has been authenticated in a Rails app is to use a framework such as OmniAuth which uses session[] to store the authenticated user's id. 
+
+e) How can you identify model attributes that should be excluded from mass assignment?
+We can use "attr_protected" and "attr_accessible" to identify model attributes that should be excluded from mass assignment.
+
+f) What is an association, and what kinds of associations are possible among application entities?
+An association is a logical relationship between two types of entities in a software architecture. There can be one-to-one, one-to-many or many-to-many relationships among application entities. 
+
+g) Identify and describe the mechanism provided by relational databases to model associations.
+Relational databases use foreign keys to model associations. A foreign key is a column in one table whose job is to reference the primary key of another table to establish associations between objects represented by those tables.
+
+
+
+39.
+a) What were the most important (to you, personally) concepts, principles, skills, tools, etc. that you learned/mastered throughout the semester.
+All the different software methodologies and when to apply which methodology was very informative. Picking up basic programming in Ruby and Rails was also useful.
+
+b) Note any concepts, principles, skills, tools, etc. that you would have liked to learn, but that we didn't cover.
+I wish the labs were a bit more comprehensive.
+
+c) List all everything that you feel you did especially well this semester (master specific tools, languages, skills, etc.;  contribute to the project in a specific way, etc., learn and implement specific things quickly, etc.).
+Commnuciation skills and collaborating with other students. 
+
+d) List anything that that you feel that you didn't do as well, or that didn't go as well as you hoped (getting a list of these items will help me to better schedule material for future semesters).
+I wish I was more well-versed in Rails at the end of the semester.
+
+e) THANK YOU!
+^__^
