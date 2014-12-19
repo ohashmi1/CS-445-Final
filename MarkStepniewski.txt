@@ -1,0 +1,48 @@
+﻿Owner: Mark Stepniewski
+Collaborators: Ben Malecki (Q24) , Scott Aloisio (Q34)
+Collaboration Hangout: https://www.youtube.com/watch?v=_VNLllACwb0
+Reviewer: Will Hilska, Omar Hashmi
+Review Hangout: https://www.youtube.com/watch?v=_867rr3fejk
+Pivotal Tracker: https://www.pivotaltracker.com/story/show/84548352 (Q24)
+                   https://www.pivotaltracker.com/story/show/84548192 (Q34)
+
+
+24) Answer the following:
+1. BDD is behavior driven design and its is what we start the Agile lifecycle with. Its asks questions about how the applications will behave before and during the development process. The requirements are written down similarly to BDUF  but additionally they are constantly changing. BDD also requires user stories which are short descriptions of what is needed in an application
+2. Cucumber is the tool we use to transform user stories into acceptance and integration test.
+3. Capybara is the tool we use to simulate the user interaction with the browser  to perform steps of a scenario. 
+4. Verification is asking the question of whether you built it right and met the specifications, and Validification is the question of whether you built the right thing meaning it did what the customer wants.
+5. Regression testing is act of automatically reruning old tests on the newer versions of a software project. As a project progresses through cycles it ensures that the tests written in prior versions still pass.
+6. A stub is a special purpose program used to simulate the activity of the missing component. For example if a project is not complete you can use a stub to test one aspect of the project and is used in top down integration Drivers are the test modules that simulate higher level modules. This is used in bottom up testing before the higher level modules are created.
+7. Modified bottom up software development is the process of developing small pieces of a project to create a larger more complex system. This process heavily develops their base elements thoroughly and test how they work together using drivers.
+
+
+In modified top-down development the overall system is developed first and then each breaks down the larger system into the smaller segments. This method uses stubs to simulate what the smaller segments of the project will execute. Each levels components are individually testing before merging.
+
+
+The modified sandwich technique requires both stubs and drivers. While using this technique the top layer is tested with stubs and the bottom layer is tested with drivers.
+
+
+The Big Bang approach doesn’t use stubs or drivers and everything is integrated together at the same time. It is not good at isolating faults.
+
+
+34) Answer the following:
+1. A partial is Rails’ name for a reusable chunk of a view. When similar content must appear in different views, you can put that content in a partial and include it in separate files to DRY out repetition.
+2. Advice is a specific piece of code that implements a cross-cutting concern. An example of this is validification. An example is the Rotten potatoes example validating that a movie has a title and release date is an example of advice.
+3. By the use of filters advice can change the flow of execution in a Rails Application. Two examples of this is the use of calls redirect_to and render.
+4. The join point is the place where you want to perform the validations written in the advice.
+5. Point-cut is a set of join points, which are the places where the advice is executed at runtime.
+6. AOP is aspect oriented programming, which DRYs out a program by separating the cross cutting concerns such as validification and filters, from the main code of actions to which the concerns apply. An aspect is the combination of advice and a pointcut.
+7. AOP advantages: It modularizes cross-cutting concerns and DRYs out code since you can re-use the aspects. Also re-using the aspects will make your code shorter and easier to read.
+AOP disadvantages: AOP is hard to debug and maintaining. Also the use of AOP in your program can make it harder to unit test your code.
+
+
+
+
+
+
+39) 
+1. The most important part of this class to me was being able to learn how software development happens in the professional world. I thought Pivotal Tracker was a great tool for keeping track of the progress of a project.
+2. Although I did enjoying learning Ruby in the beginning of the semester I felt that the transition to Rails was difficult. I think we could of had  a better tutorial on Rails.
+3. I feel as though I have mastered the concepts of Agile development and the use of pair programming through google hangouts and also the homework assignments that were only on Ruby.
+4. I did well on all of the Homeworks but once we started working on Website one  I feel as if the class lost direction and purpose and that I wasn't learning anything. Srums were a huge waste of time, they took up the large majority of the class and hearing about what other people are currently working on, although interesting, did not teach me much.
