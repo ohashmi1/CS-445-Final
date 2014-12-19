@@ -36,10 +36,10 @@ encourages behavior reuse by making use of mix-ins.
  
 Owner: Yue Zheng
 Collaborators: Anh Quach and Ryan Smith
-Hangout:  http://youtu.be/LhUqqeeU59Y
+Hangout:http://youtu.be/LhUqqeeU59Y
 Reviewer(s): Ridwan Olatilewa
-Hangout:  http://youtu.be/LhUqqeeU59Y
-Pivotal Tracker:  https://www.pivotaltracker.com/n/projects/1230002/stories/84548378
+Hangout:https://www.youtube.com/watch?v=m9DWuADa5U8&list=UUA2TjUDXm5sWU4Ya8ZNw12Q
+Pivotal Tracker:https://www.pivotaltracker.com/n/projects/1230002/stories/84548378
  
  
 Question19.
@@ -83,10 +83,10 @@ A common use of yield is implementing iterators like each and every_nth. It also
  
 Owner: Yue Zheng
 Collaborators: Anh Quach and Ryan Smith
-Hangout:  http://youtu.be/LhUqqeeU59Y
+Hangout:http://youtu.be/LhUqqeeU59Y
 Reviewer(s): Ridwan Olatilewa
-Hangout:  http://youtu.be/LhUqqeeU59Y
-Pivotal Tracker:  https://www.pivotaltracker.com/n/projects/1230002/stories/84548376
+Hangout:https://www.youtube.com/watch?v=m9DWuADa5U8&list=UUA2TjUDXm5sWU4Ya8ZNw12Q
+Pivotal Tracker:https://www.pivotaltracker.com/n/projects/1230002/stories/84548376
  
  
 Question39
