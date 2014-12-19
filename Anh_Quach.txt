@@ -1,6 +1,6 @@
 Owner: Anh Quach
 Collaborators: Yue Zheng, Shari Steinberger
-Reviewer: Weronika Kowalczyk
+Reviewer: Weronika Kowalczyk "The answers look complete, they answer all parts of the questions. They are also clear."
 Hangout: 
 http://youtu.be/U7lgfKLVbvE
 http://youtu.be/LhUqqeeU59Y
@@ -21,7 +21,7 @@ ANSWER:
 a. FIRST is the five principles of creating a good test: Fast, Independent, Repeatable, Self-checking, and Timely
 	First: it should be easy and quick to run
 	Independent: No test should rely on preconditions created by other tests
-	Repeateable: test behavior should not depend on external facotrs such as today's date or "magic constants"
+	Repeateable: test behavior should not depend on external factors such as today's date or "magic constants"
 	Self-checking: each test should be able to determine on its own whether it passed or failed, rather than relying on human to check its output.
 	Timely: tests should be created or updated at the same time as the code being tested.
 
