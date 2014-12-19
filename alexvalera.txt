@@ -1,0 +1,50 @@
+13)
+
+Describe what a PERT chart is, what it shows and what are its limitations.
+
+a. A PERT chart is a project management tool used to schedule, organize, and coordinate tasks within a project. It's a graphical illustration of a project as a network diagram consisisting of nodes representing events or milestones in the project linked by directional lines representing tasks in the project. Limitations include it being rather difficult to decipher in comparison to a Gantt chart, especially with complex projects. These nodes that represent events have four components: 
+
+1) Earliest Time to Start
+2) Latest Time to Start
+3) Earliest Time to Finish 
+4) Latest Time to Finish
+
+
+Describe what a Gantt chart is, its similarities to a PERT chart and its differences
+
+b. A Gantt chart is a horizontal bar chart developed as a productional control tool. It's frequently used in project management and it provides a graphical illustration of a schedule that helps plan, coordinate, and track specific tasks in a project. Gantt charts are constructed with a horizontal axis representing the total time span of the project, broken down into increments (usually months) and a vertical axis representing the tasks that make up the project. A Gantt chart is similar to a PERT chart because they both are used for project management planning, however Gantt charts are not completely suitable to illustrate dependencies of the project. 
+
+Discuss how scheduling is handled in an Agile project.
+
+c. Scheduled is handled using estimation of tasks with a scale that indicates the level of complexity of a task. Agile also uses velocity to keep track of how many tasks can be done in a period of time. Agile uses small iterations to provide progress and prototype working software. Gantt charts and PERT charts are also used in order to schedule while looking at dependencies, tasks, and entire time span of the project. 
+
+
+30)
+
+Describe and discuss four language features that JavaScript shares with Ruby.
+
+a. Javascript shares many things with ruby. Here are a few common features:
+	- Both are object oriented and functional programming languages. 
+	- Both have "duck typing" capabilities, which say that an object's suitability
+	for some purpose is determined by the presence of certain methods and properties, rather than the actual type of the object. 
+	- Both share lambda expressions/anonymous functions, which means that both languages can have a function definition that is not bound by the identifier. Ruby supports lambda expressions using a block. 
+	- Both have dynamic typing which means that both languages have type checks that are performed mostly at run time. 
+
+
+Does JavaScript have classes?  Explain.
+
+b. Javascript has no classes. However, Javascript is still object-oriented by way of being a protoype-based language, since all objects can be augmented with new fields and methods, which become prototypes for newer objects that will inherit the previous prototypes. You can also use constructor functions to create objects, much like you would do with classes.
+
+How should JavaScript code be related to HTML page markup?
+
+c. Javascript code should be related to HTML page markup by placing it after the closing 
+<body> tag and within the <script> tags. Javascript acts on html elements by referring to them by their specific ID or class name. With that information, it can execute a number of operations to change or interact with the elements in anyway. In a Rails application, Javascript for the application lies in the assets folder whereas HTML lies within the views folder in the app directory. 
+
+Define and describe JSAPI.
+
+d. JSAPI is a browser functionality that lets Javascript code manipulate the content of the current HTML page. JSAPI has many interfaces that developers may be able to use to create a web application or a simple website. 
+
+Define and describe jQuery, and explain how it is used.
+
+e. JQuery is a fast, small, and feature-rich Javascript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. 
+
