@@ -1,0 +1,113 @@
+Question 18.          
+The three pillars of Ruby are:  Everything is an object, every operation is a method call . . . , and all programming is metaprogramming.
+
+a.Define and explain each of these.
+ 
+(1). Everything is an object. Even primitive types like integers are true objects.
+ 
+(2). Every operation is a method call on some object and returns a value. For 	   instance, a.b means: call method b on object a, and a is the receiver to     which you send the method call, assuming a will respond to that method.
+
+(3).All programming is meta programming: classes and methods can be added or changed at any time, even while a program is running.
+
+b.     Provide two examples of each.
+ 
+(1).
+1.  If I type 5.class in terminal, it will show =>Fixnum. This proves that integer 5 is   a object.
+2. When we type “1.is_a? Object” or “Fixnum.is_a? Object”, and … in terminal, the result will be true, which means everything is an object in ruby.
+ 
+(2).
+1. 1+2, “a”+”b”,[a,b]+[b,c] are all different methods named ‘+’.
+2. A lot of operations can be rewritten as calls to send:
+     1+2 => 1.send(:+,2)
+     x==4 => x.send(:==,4)
+     … So it can prove that every operation is a method to some degree.
+
+(3).
+1.  The  use of ”attr_accessor” to define instance methods that can set or get           values of instance variables is an example of meta programming- creating code at runtime that defines new methods.
+2.  We can reopen a class and add a new method, which is another example of metaprogramming.
+ 
+c.Define and discuss 'duck typing' and its relationship to mix-ins.
+
+Duck typing: A class that implements some set of behaviors characteristic of another class, possibly by using mix-ins, is sometimes said to “quack like” the class it resembles. Ruby’s scheme for allowing mix-ins without static type checking is therefore sometimes called duck typing.
+ 
+A mix-in is a set of related behaviors that can be added to any class that satisfies the mix-in contract. Because Ruby doesn’t have static types, it is the programmer’s responsibility to ensure that the class including the mix-in satisfies the conditions
+stated in the mix-in’s documentation, or they will get a runtime error.  Duck typing
+encourages behavior reuse by making use of mix-ins.
+ 
+Owner: Yue Zheng
+Collaborators: Anh Quach and Ryan Smith
+Hangout:  http://youtu.be/LhUqqeeU59Y
+
+Reviewer(s): Ridwan Olatilewa
+Hangout:  http://youtu.be/LhUqqeeU59Y
+Pivotal Tracker:  https://www.pivotaltracker.com/n/projects/1230002/stories/84548378
+ 
+ 
+Question19.
+Answer the following with respect to the Ruby language:
+a.Do objects have types?  Do the variables that point to objects have types?
+
+Objects have types, but variables don’t.
+ 
+b.What is the difference between the variable @name and the variable @@name?
+
+@name is instance variable, and @@name is class variable. The namespaces are different, so @name and @@name are different variables.
+ 
+c.What happens when a method is invoked on an object, but the method cannot be found in the receiver's class?
+
+First, we allow for the possibility that one of its ancestor classes might be able to
+handle the method call. Calling super with no arguments passes the original method call. When neither a receiver nor any of its ancestor classes can handle a method call, method_missing is called on the receiver. “method_missing” can inspect the name of the nonexistent method and its arguments, and can either take action to handle the call or pass the call up to the ancestor, as the default implementation of method_missing does.
+ 
+d.What iterator method is available to all collection-like Ruby classes?
+
+The method “each”.
+ 
+e.Define and discuss the scoping rules for local variables.
+
+Ruby uses lexical scoping for local variables: a variable is defined in the scope in which it’s first assigned and in all scopes enclosed inside that one, but reusing the
+same local variable name in an inner scope temporarily “shadows” the name from the enclosing scope.
+ 
+f.Define and discuss 'poetry' mode.
+
+Poetry mode reduces clutter by allowing you to omit parentheses around method arguments and curly braces surrounding a hash, as long as the resulting code is syntactically unambiguous.
+ 
+g.Define and discuss closures.
+
+A closure is the set of all variable bindings you can “see” at a given point in time.
+Blocks are closures: all variables visible to the block’s code at the place where the
+block is defined will also be visible whenever the block executes. Therefore, blocks can help reuse by separating what to do from where and when to do it.
+ 
+h.Explain the purpose of the yield statement.
+
+A common use of yield is implementing iterators like each and every_nth. It also enables reuse by separating the traversal of data structures from operations on their elements. In the body of a method that takes a block as a parameter, yield transfers control to the block and optionally passes it an argument. Yielding is the general mechanism behind iterators: an iterator is simply a method that traverses some data structure and uses yield to pass one element at a time to the iterator’s receiver.
+ 
+ 
+Owner: Yue Zheng
+Collaborators: Anh Quach and Ryan Smith
+Hangout:  http://youtu.be/LhUqqeeU59Y
+Reviewer(s): Ridwan Olatilewa
+Hangout:  http://youtu.be/LhUqqeeU59Y
+Pivotal Tracker:  https://www.pivotaltracker.com/n/projects/1230002/stories/84548376
+ 
+ 
+Question39
+Lessons Learned (Everyone Answers!): 
+Most organizations carry out a postmortem (i.e., after delivery and acceptance) analysis of a project.   In it, they assess all aspects of the project including products, process and resources with the intent of identifying both what well in the project and what areas should be improved upon in future projects.   Before a formal postmortem, each team member does a self-assessment, called a Lessons Learned document.  Write your own sections of our Lessons Learned document for the class by summarizing:
+ 
+a.What were the most important (to you, personally) concepts, principles, skills, tools, etc. that you learned/mastered throughout the semester.
+ 
+I learned a lot of new stuff in this class, such as lifecycle of software product, software architecture, ruby, TDD, BDD, Framework, and so on. Plus, this is my first time using pivotal tracker and github.
+ 
+b.Note any concepts, principles, skills, tools, etc. that you would have liked to learn, but that we didn't cover.
+ 
+FactoryGirl. I was confused when I had to write spec tests for a method.
+ 
+c.List all everything that you feel you did especially well this semester (master specific tools, languages, skills, etc.;  contribute to the project in a specific way, etc., learn and implement specific things quickly, etc.).
+
+I have got familiar with a new language, and I can write some simple methods and tests with it. I've learned how to test a function and the importance of pair programming.
+ 
+d.List anything that that you feel that you didn't do as well, or that didn't go as well as you hoped (getting a list of these items will help me to better schedule material for future semesters). 
+
+My ruby is still embarrassing. I don’t know Ruby’s libraries well, so I am going to spend more time on its syntax and some trivial things. If we can see more examples before we approach a specific problem, things would be much better.
+ 
+e.     THANK YOU!
