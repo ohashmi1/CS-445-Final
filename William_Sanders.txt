@@ -1,0 +1,62 @@
+Owner: William Sanders
+Colaborators: Ryan Smith, Anh Quach
+Reviewer: Alex Valera
+PivotalTracker: https://www.pivotaltracker.com/story/show/84548444
+
+3.
+a. A story first begins with the idea itself. If it is a feature, you must consult with the client to ascertain what their desires are and try to best understand what they are asking for. The user story that is a feature is then expressed in the Connextra format of 
+
+"Feature name
+As a <kind of stakeholder>, 
+So that  <I can achieve some goal>, 
+I want to <do some task>"
+
+A story can also be to resolve a bug that hasn't been resolved, or it can be a smaller task that isn't necessarily a feature, but still important, called a chore.
+
+Once this user story has been established, we can now begin the process of entering the user story into PivotalTracker. The story title can be the name of the feature, and the description can be the Connextra description. Then assign a number of points to the story so harder features give more credit. Once the story is entered, anybody associated with the project can find the feature, read the descrpition, and determine if they want to begin working on the feature.
+
+If they decide to take the feature, they click "Start" and begin working on the feature. Once they believe they are finished with implementing the feature, they go back to the story on PivotalTracker, and click Finish. Even though the code for the feature maybe finished, it needs to be pushed to a test environment to other developers can complete acceptance testing. When the developer has moved the code to a test environment, the developer can click Deliver so the Q/A team is notified that they can perform acceptance testing on the feature. If the feature passes all tests, the QA team can click Accept on the feature and the story is now complete. If it does not pass the test, the QA team can reject the feature. In PivotalTracker, they can add a comment to explain why the feature was rejected. If the feature was rejected, the story starts from the beginning, and the developer must click Restart to begin working on the story again.
+
+b.) 
+Story title: This is often the name of the feature, or a very brief description of what it does.
+Story Type: There are four types of stories in PivotalTracker:
+	-Feature: These are stories that add true functionality to the software, and are often conceived in collaboration with the client. These stories are expressed in the Connextra format. Because features are the "meat" of the program, features are assigned points and owners of the features are awarded points for successful completion.
+	-Chores: These stories represent tasks that don't necessarily add any direct functionality to the program, and are more suited for describing tasks that enhance or support a feature or project, but are more of a rote task then a full fledged feature.
+	-Bugs: Any issues with the software is documented in a story. This can be a technical bug, or an error in understanding.
+	-Release: These are milestones of a project. This can be a demo to the client, or the first release, or an upgrade, etc.
+Points: If the story is a feature, then it is assigned a point scale from 0-3. The harder the featuer is, the higher the points should be awarded.
+Requester: This is the person who is requesting the feature. Often this is the person who speaks for the client, or is the actual client.
+Owners: These are the people who are actually working on implementing the story.
+Description: This is where you would put the Connextra format story if it is a feature, plus additional notes about the feature given by the client on what they want. If it is a bug, you would describe the issue with the project.
+Labels: These can be used to group similar themed stories together. When one creates an Epic, you use the labels field to add a story to a particular Epic.
+Tasks: If a user story is somewhat complicated, but not enough so to warrant its breaking out into multiple user stories, one can split a user story into multiple tasks to divide the work into meaningful steps.
+Activity: This allows owners and requestors to communicate with each other about a particular user story. It is important to keep all lines of communication open, and to employ private messaging systems as sparingly as possible. This field encourages that.
+
+c.) In Agile development, open communication is vital to a project's success. Stories in PivotalTracker encourage open communication. All developers should be aware of the features that are being developed around them. This allows easier integration of features and increases developer awareness. The use of the Activity field is also important when there are multiple owners of a story. It encourages collaboration and minimizes conflicts created from simultaneous coding efforts.
+
+
+
+Owner: William Sanders
+Colaborators: Ryan Smith, Anh Quach
+Reviewer: Alex Valera
+PivotalTracker: https://www.pivotaltracker.com/story/show/84548366
+
+21.)
+a.) The form_tag helper accepts 2 arguments: the path for the action and an options hash. The action path can be a direct path in the form of a string, but that wouldn't be very conventional. It would be better to specify a controller and action hash, which rails will then look at and generate the path on the fly by consulting the routing table. The options hash includes the method of form submissions, and things such as the HTML's element class. The method of form submission can be either a GET or a POST.
+
+b.) In Rails, you can have the HTTP server send an HTTP redirect status code to the browser. This is accomplished by calling redirect_to, likely in your controller somewhere. This method accepts an options hash and a response status hash. The options hash can simply be a string of the full URI, or it can be generated by sending it the name of the route or a controller action.
+
+Redirects should be used when it is determined that the user no longer needs to be on a particular page, and would make more sense that they be on a new page. It is more user friendly then having a link that says "Click here to continue", as a redirect is automatic. For example, if a user enters information into a form, the page should give the user a confirmation that the submission was successful, or unsuccessful.
+
+c.) It is important to realize that HTTP is stateless protocol. Every HTTP request is independent from the next and the previous. Therefore, when redirecting a user, there must be a way to add temporary persistence so that there is an explanation for the redirect when the user loads the redirected page. This is accomplished through using the flash[]. This is similar to hash, but persists from the current request to the next by using the session hash. Rails automatically erases the flash once the next request is complete. So in the scenario described in b.), if the user was redirected to the index of items that he/she was working on, without the flash, it would just simply display the index of items without any confirmation that an item was added. With the flash, we can redirect to the index of items, and have a message appear at the top notifying him/her that the item was added. When they refresh the page, the message will no longer render because the flash was erased by the Rails server.
+
+d.) The session hash is used to solve the issue of HTTP being stateless. As stated in c), flash is a special case of the session, but sessions aren't deleted after 1 request as in flash. In the session, a cookie is generated that is stored on the clients browser, and the browser transmits the data from cookie along with each request. Let's say a user needs to authenticate to a website. One request would be a POST of their username and password, but the next request, if a valid username and password, would need to indicate that their authentication was successful. If HTTP stateless, authentication is impossible on its own. But thanks to the session hash and cookies, information can persist from one request to the next, and can allow a user to perform authenticated actions without manually supplying credentials every time.
+
+Owner: William Sanders
+
+39.)
+
+a.) I really enjoyed learning Ruby on Rails. I thought it was an especially interesting framework. I normally do web development projects in PHP, so it was refreshing to see things working from an entirely different way of organisation. I also felt learning how to collaborate effectively on team projects was valuable.
+b.) I would've liked to have seen more project planning aspects of software engineering. I still don't feel like I entirely understand how software design decisions are made, and how to best plan for what things need to get done first.
+c.) I felt I really understand Model-View-Controller and the Rails framework. I also felt like my contribution to LocalSupport went well.
+d.) I found it hard to schedule pairing sessions and find someone to work with on a homework. I often found myself in a conundrum where I wanted to work on something, but couldn't because I felt that I wouldn't be doing things the Agile way by doing lone wolf programming.
