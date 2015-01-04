@@ -1,0 +1,57 @@
+Owner: Omar Hashmi
+Reviewer: Mark Stepniewski , William Hilska
+Collaborator:I couldn’t find anyone to collaborate with due to limited time and people’s prior commitments.
+Review Hangout: https://plus.google.com/hangouts/_/hoaevent/AP36tYcYbhFG9upkzbRi_IKBNLbRS08qwXj-fH-evuYRHN-5BA46wA?authuser=0&hl=en
+Collaborator Hangout: 
+
+
+5a)Plan and Documents uses a completely different technique to measure effort.
+   At first, SRS is broken up into tasks and those tasks can be converted to cost 
+   using cocomo models. Cost is usually generated from the number of Labor Months * cost      per developer  + cost of overhead.
+   We then create a schedule using something like PERT charts.
+   Now we want to compare what you predicted and how long things are taking, so we track  both the actual expenditures and the time for those tasks against PERT chart.
+
+5b)Plan and Document:
+1)Requires Software Requirement Specification
+2)Interviews are held with clients to ensure validity and verification of tasks and prototyping maybe used as well.
+3)The delivery date is specified early in the project based on pert charts and milestones.
+4)Cost estimation is based on managers experience and task size using various mathematical models like cocomo
+5)Risk management is also done early in the project to overcome them.They are also done by using mathematical models. 
+Agile Development:
+1)It requires user stories to break down tasks and then testing is done using cucumber tests.
+2)Employee performance is evaluated using velocity and points allocated to tasks.
+3)There is no delivery date provided in agile instead a range of time is provided based on experience.
+4)Cost estimation is done after talking to the clients and engineers plan the time it would take to finish the task and then provide a rough estimate of cost taking into account all the things that could go wrong.
+5)Agile also uses lo fi sketches and smart stories and storyboards for clients to ensure they are building the right thing.
+
+
+5c)Planning Poker is an agile estimating and planning technique that is consensus based. To start a poker planning session, the product owner or customer reads a agile user story or describes a feature to the estimators. Each estimator is holding a deck of Planning Poker cards with values like 0, 1, 2, 3, 5, 8, 13, 20, 40 and 100, which is the sequence we recommend. The values represent the number of story points, ideal days, or other units in which the team estimates.The estimators discuss the feature, asking questions of the product owner as needed. When the feature has been fully discussed, each estimator privately selects one card to represent his or her estimate. All cards are then revealed at the same time.If all estimators selected the same value, that becomes the estimate. If not, the estimators discuss their estimates. The high and low estimators should especially share their reasons. After further discussion, each estimator reselects an estimate card and its repeated until we reach a consensus.
+
+
+5d)Planning Poker is a lot different than plan and document estimation techniques it mainly takes into account the experiential time based on previous projects. However, planning poker is more collaborative where people reach a consensus at the end and discuss the problems among themselves. Plan and document also relies on time to finish the task rather than its nature/
+
+
+26a)Expectations provides a simple, readable API to express the expected outcomes in a code example. We wrap an object or block in expect, call to or to_not (aliased as not_to) and pass it a matcher object to express an expected outcome.
+
+26b)Matchers provides a number of useful matchers we use to define expectations. Any object that implements the matcher protocol can be used as a matcher.You can use this feature to invoke any predicate that begins with "has_", whether it is part of the Ruby libraries (like Hash#has_key?) or a method you wrote on your own class. Two examples of matchers are should eq() and should_not be_empty.
+
+26c)A seam is a place where you can change your app’s behavior without editing the code.
+It is useful for testing because you can isolate behavior of some code from that of other code it depends on
+
+26d)Mocks are objects pre-programmed with expectations which form a specification of the calls they are expected to receive.They are used to create fake objects in a controlled environment for effective testing and debugging.The purpose of both is to eliminate testing all the dependencies of a class or function so your tests are more focused and simpler in what they are trying to prove.
+
+26e)Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test. Stubs may also record information about calls, such as an email gateway stub that remembers the messages it 'sent', or maybe only how many messages it 'sent'.The purpose of stubs is to eliminate testing all the dependencies of a class or function so your tests are more focused and simpler in what they are trying to prove.
+
+26f)Isolation is important because we need to eliminated dependencies as much as possible to be completely sure of what is being tested, otherwise it would be very hard to break it down and know exactly what part of the program is causing the bus. Starting from a very basic small unit eliminates guesses and checks. We therefore need to completely isolate the unit.
+
+26g) Isolation is insured by various tools and techniques including mocking and stubbing.Fake objects and scenarios are also created to test a single unit of the program which is independent. Often times, one method at a time is tested to ensure its doing what’s expected.Scientific methods are used too to ensure isolation and there are tools that help with that.
+
+39a)I think I learned a lot in this class, and I think this is the only class where I got to learn about so many software engineering techniques, tools and concepts. I think I am very good with Ruby and I can write very well rspec tests. I also like cucumber and I think its a very natural way of writing tests and I am good with that. The most important thing that i learned in this class is Agile Development and I can see its importance because in all my interviews, I have been asked questions about agile development. I think I have internalized software development techniques which is really good and it will help me a lot in future.
+
+39b)I would also like to see software development from a ground up instead of provide us the code for beginning. I feel like there should be a one group project for the entire class where we apply the skills that we learn. It could be anything but entire teamwork and build from scratch.
+
+39c)I learned ruby really well, I can write very good rspec tests because of website one and I mastered git, cucumber and learned about frameworks and toolkits. These things are very important in real life and I am confident I would be in a very good position after this class. I know agile development very well which is used a lot nowadays so it definitely gives me an edge over other students who haven’t taken this class.
+
+39d) I think i didn’t understand the last part of the course about java script and I would like to watch the lectures again over the winter to break to really internalize it. I feel like I was on top of everything and always watched lectures before class and thus I have gained considerable knowledge in this class.
+
+39e) Thank you Professor Rose, you were really amazing and you made the class really fun and I think you were very understand and co-operative and you helped us out really well. I really wish I had taken cs110 with you because you are such an amazing professor.
